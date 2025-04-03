@@ -154,14 +154,12 @@ typedef int		(*app_func_t)(struct ast_channel* channel, const char * data);
 typedef int		(*app_func_t)(struct ast_channel* channel, void * data);
 #endif
 
-#/* */
+#/* Quinn update */
 EXPORT_DEF void app_register()
 {
 	unsigned i;
 	for(i = 0; i < ITEMS_OF(dca); i++)
-	{
-		/ * Quinn */
-		
+	{	
 		ast_register_application2 (dca[i].name, (int (*)(struct ast_channel *, const char *))(dca[i].func)
 		, dca[i].synopsis, dca[i].desc, self_module());
 	}
