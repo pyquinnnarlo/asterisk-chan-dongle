@@ -35,10 +35,9 @@
 #include <config.h>
 #endif /* HAVE_CONFIG_H */
 
-AST_MODULE_SELF_SYM;
+AST_MODULE_SELF_SYM; /* Quinn */
 
-// #include <asterisk.h>
-#include <asterisk/ast_version.h>
+#include <asterisk.h> 
 
 ASTERISK_FILE_VERSION(__FILE__, "$Rev: " PACKAGE_REVISION " $")
 
