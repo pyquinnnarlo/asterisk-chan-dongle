@@ -160,7 +160,10 @@ EXPORT_DEF void app_register()
 	unsigned i;
 	for(i = 0; i < ITEMS_OF(dca); i++)
 	{
-		ast_register_application2 (dca[i].name, (app_func_t)(dca[i].func), dca[i].synopsis, dca[i].desc, self_module());
+		/ * Quinn */
+		
+		ast_register_application2 (dca[i].name, (int (*)(struct ast_channel *, const char *))(dca[i].func)
+		, dca[i].synopsis, dca[i].desc, self_module());
 	}
 }
 
