@@ -35,8 +35,11 @@
 #include <config.h>
 #endif /* HAVE_CONFIG_H */
 
+AST_MODULE_SELF_SYM;
 
-#include <asterisk.h>
+// #include <asterisk.h>
+#include <asterisk/ast_version.h>
+
 ASTERISK_FILE_VERSION(__FILE__, "$Rev: " PACKAGE_REVISION " $")
 
 #include <asterisk/stringfields.h>	/* AST_DECLARE_STRING_FIELDS for asterisk/manager.h */
